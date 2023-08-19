@@ -17,8 +17,6 @@ const BasketList = ({shoppingCart, cartTotal,onItemDeleteFromCart, onQuantityCha
                                     prod_quantity={item.prod_quantity} 
                                     prod_id={item.prod_id}
                                     prod_image={item.prod_image} 
-                                    key={item.prod_id}
-                                    cartTotal={cartTotal}
                                     onItemDeleteFromCart={onItemDeleteFromCart}
                                     onQuantityChange={onQuantityChange}
                                 />

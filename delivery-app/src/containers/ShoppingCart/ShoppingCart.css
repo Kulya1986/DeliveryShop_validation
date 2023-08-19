@@ -1,10 +1,11 @@
 .cart-container{
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
 }
 
 .shopping-cart{
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
 }
 
 .cart-summary{
@@ -42,4 +43,17 @@
     transform: scale(1.01);
     color:antiquewhite;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .cart-submit{
+        width: 10rem;
+        padding: 1rem 2rem;
+    }
+    .cart-total{
+        font-size: var(--text-regular);
+    }
+    .cart-summary{
+        margin-top: 1rem;
+    }
 }

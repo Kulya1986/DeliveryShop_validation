@@ -1,16 +1,18 @@
 .shops{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.2rem;
+    gap: 1rem;
     justify-items: center;
     align-items: center;
-    min-width: 18rem;
+    min-width: 16rem;
     border: 1px solid var( --dark-lazur);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var( --light-yellow);
     height: 100%;
-    padding: 2rem;
+    padding: 1.8rem;
+    margin-right: 1rem;
+    overflow-y: scroll;
 }
 
 .shop-button{
@@ -55,3 +57,16 @@
     cursor: auto;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .shops{
+        min-width: 14rem;
+        padding: 1.2rem;
+    }
+
+    .shop-button{
+        font-size: var(--text-large);
+        padding: .6rem .8rem;
+        width: 10rem;
+    }
+}

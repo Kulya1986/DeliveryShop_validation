@@ -23,7 +23,8 @@ const OrderCardHistory = ({orderProds, orderTotal}) => {
                     }
                 </div>
                 <div className='order-card-total'>
-                    Total price: {orderTotal}
+                    <div>Total price:</div> 
+                    <div>{orderTotal} $</div>
                 </div>
             </section>        
         );

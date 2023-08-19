@@ -1,16 +1,17 @@
 .product{
-    width: 16rem;
+    /* width: 18rem; */
     border: 1px solid var( --dark-lazur);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var( --light-green);
     height: auto;
     padding: 1rem;
+    margin: .5rem;
 }
 
 .product-img{
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 0rem 0rem;
 }
 
 .product-name{
@@ -19,7 +20,7 @@
     font-size: var(--text-regular);
     color: var(--dark-lazur);
     text-align: center;
-    padding: 1rem 1rem;
+    padding: 0rem 1rem;
 }
 
 .product-price{
@@ -52,3 +53,22 @@
     margin-right: 1rem;
 }
 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (max-width: 992px) {
+    .products-list{
+        grid-template-columns:  repeat(2, minmax(18rem, 1fr));
+        padding: 1rem .5rem;
+    }
+    
+} */
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+    .products-list{
+        grid-template-columns:  repeat(1, minmax(18rem, 1fr));
+        padding: 1rem .5rem; 
+} */
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */

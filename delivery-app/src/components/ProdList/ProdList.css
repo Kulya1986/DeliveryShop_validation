@@ -5,7 +5,7 @@
     background-color: var( --light-yellow);
     padding: 1rem 1rem;
     display: grid;
-    grid-template-columns:  repeat(3, minmax(17rem, 1fr));
+    grid-template-columns:  repeat(3, minmax(15rem, 1fr));
     gap: .5rem;
     overflow: scroll;
     justify-items: center;
@@ -13,3 +13,24 @@
     font-size: var(--text-large);
     color: var(--dark-lazur);
 }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    .products-list{
+        grid-template-columns:  repeat(2, minmax(15rem, 1fr));
+        padding: 1rem .5rem;
+    }
+    
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .products-list{
+        grid-template-columns:  repeat(1, minmax(15rem, 1fr));
+        /* padding: 1rem .5rem; */
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */

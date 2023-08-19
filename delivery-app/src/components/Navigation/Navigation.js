@@ -16,19 +16,19 @@ const Navigation = ({onNavigationTabClick}) => {
         <Button 
             className="bp4-minimal nav-text-style" 
             text="Shop" 
-            style={{color: '#01233e', padding:'0 2rem'}}
+            style={{color: '#01233e', padding:'0 1.6rem'}}
             onClick={()=>{onNavigationTabClick('shop')}}
         />
         <Button 
             className="bp4-minimal nav-text-style" 
             text="Shopping Cart" 
-            style={{color: '#01233e', padding:'0 2rem'}}
+            style={{color: '#01233e', padding:'0 1.6rem'}}
             onClick={()=>{onNavigationTabClick('cart')}}
         />
          <Button 
             className="bp4-minimal nav-text-style" 
             text="History" 
-            style={{color: '#01233e', padding:'0 2rem'}}
+            style={{color: '#01233e', padding:'0 1.6rem'}}
             onClick={()=>{onNavigationTabClick('history')}}
         />
         </Navbar.Group>

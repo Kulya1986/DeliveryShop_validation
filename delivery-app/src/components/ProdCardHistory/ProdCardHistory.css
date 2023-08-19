@@ -1,5 +1,5 @@
 .history-product{
-    min-width: 16rem;
+    min-width: 15rem;
     border: 1px solid var( --dark-lazur);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -11,16 +11,16 @@
 }
 .history-product-img{
     width: 60%;
-    padding: .1rem .5rem .1rem;
+    padding: .5rem;
 }
 
 .history-product-img > img{
     width: 100%;
-    padding: 1rem;
+    padding: 0rem;
 }
 
 .history-product-info{
-    padding: 1rem 1rem 1rem;
+    padding: 1rem .5rem 1rem;
 }
 
 .history-product-name, .history-product-price, .history-product-quantity {

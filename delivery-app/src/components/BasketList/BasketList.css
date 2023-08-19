@@ -1,11 +1,12 @@
 .basket-list{
     height: 70vh;
     width: 60%;
+    min-width: 16rem;
     border: 1px solid var( --dark-lazur);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var( --light-yellow);
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: .5rem;
@@ -15,4 +16,10 @@
     margin: .5rem;
     font-size: var(--text-large);
     color: var(--dark-lazur);
+}
+
+@media only screen and (max-width: 768px) {
+    .basket-list{
+        width: 55%;
+    }
 }
