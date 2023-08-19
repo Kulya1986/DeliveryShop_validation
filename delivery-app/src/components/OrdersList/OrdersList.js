@@ -4,13 +4,13 @@ import './OrdersList.css';
 import React from 'react';
 
 const OrdersList = ({ordersList, orderTotalList}) => {
+
     if(ordersList.length!==0 && orderTotalList.length!==0)
     {
         return(
         <section className='orders-list'>
             {
                 ordersList.map((item, ind) => {
-                    
                     return(
                         <OrderCardHistory 
                         orderProds={item} 
@@ -19,7 +19,6 @@ const OrdersList = ({ordersList, orderTotalList}) => {
                         />
                     );
                 })
-
             }
          </section>
         );

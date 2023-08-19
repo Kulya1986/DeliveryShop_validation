@@ -52,10 +52,13 @@ class History extends Component{
     }
   
     render(){
-        console.log(this.state.orders);
+        
         let ordersList=[], prodsOfOrder=[],orderTotalList=[];
-        // const {orders} = this.state.orders;
+        
         if (this.state.orders.length!==0){
+            this.state.orders.sort((item1, item2)=>{
+                return item1.order_id - item2.order_id;
+            });
             let tempOrderId = this.state.orders[0].order_id;
             orderTotalList.push(this.state.orders[0].order_total);
             this.state.orders.forEach(position => {
@@ -70,8 +73,6 @@ class History extends Component{
                 }
             });
             ordersList.push(prodsOfOrder);
-            console.log('Orders List',ordersList);
-            console.log('Totals List',orderTotalList);
         }
         
         return(

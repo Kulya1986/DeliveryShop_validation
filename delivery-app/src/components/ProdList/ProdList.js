@@ -47,7 +47,7 @@ class ProdList extends Component{
 
     render(){
         const {products} = this.state;
-        console.log(products);
+        // console.log(products);
         if(products.length===0){
             return(
                 <section className='products-list'>

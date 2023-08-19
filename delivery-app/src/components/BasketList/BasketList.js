@@ -8,7 +8,7 @@ const BasketList = ({shoppingCart, cartTotal,onItemDeleteFromCart, onQuantityCha
         return(
             <section className='basket-list'>
                 {
-                        shoppingCart.map((item) => {
+                        shoppingCart.map((item, ind) => {
                         
                             return(
                                 <BasketItem 
@@ -17,6 +17,7 @@ const BasketList = ({shoppingCart, cartTotal,onItemDeleteFromCart, onQuantityCha
                                     prod_quantity={item.prod_quantity} 
                                     prod_id={item.prod_id}
                                     prod_image={item.prod_image} 
+                                    key={ind}
                                     onItemDeleteFromCart={onItemDeleteFromCart}
                                     onQuantityChange={onQuantityChange}
                                 />

@@ -9,7 +9,6 @@ const OrderCardHistory = ({orderProds, orderTotal}) => {
                 <div className='order-card-prods'>
                     {
                         orderProds.map((item) => {
-                            console.log('OrderCard', item);
                             return(
                                 <ProdCardHistory    
                                     prod_image={item.prod_image} 
