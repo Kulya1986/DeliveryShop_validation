@@ -5,6 +5,19 @@ import React, { Component } from 'react';
 
 
 class ShoppingCart extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            validName:false,
+            validEmail: false,
+            validPhone:false,
+            validAddress: false,
+            validationMsgName:'',
+            validationMsgEmail:'',
+            validationMsgPhone:'',
+            validationMsgAddress:''
+        }
+    }
 
     onQuantityChange = (newQuantity, prod_id) => {
         this.props.shoppingCart.forEach(item => {
@@ -40,6 +53,31 @@ class ShoppingCart extends Component{
             }
         })
     }
+
+    onOrderSubmitClick = () =>{
+        this.validationCheck();
+        const st = this.state;
+        if (st.validName && st.validEmail && st.validPhone && st.validAddress)
+        {
+            console.log("Form is valid");
+            this.props.onOrderSubmit();
+        }
+    }
+
+    validationCheck = () =>{
+        const {customer_name, customer_email, customer_phone, customer_address} = this.props.customerInfo;
+        const phoneExp = /\(?\d{3}\)?\s?\d{3}-?\s?\d{2}-?\s?\d{2}/;
+        const emailExp =/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        const nameExp = /^[A-Za-z.\s]+$/;
+        
+        console.log(customer_phone.search(phoneExp));
+        console.log(customer_email.search(emailExp));
+        console.log(customer_name.search(nameExp));
+        console.log('Name', customer_name);
+        console.log('Email', customer_email);
+        console.log('Phone', customer_phone);
+        console.log('Address', customer_address);
+    }
   
     render(){
         return(
@@ -65,7 +103,7 @@ class ShoppingCart extends Component{
                     <input className="cart-submit" 
                             type="submit" 
                             value="Submit"
-                            onClick={this.props.onOrderSubmit}
+                            onClick={this.onOrderSubmitClick}
                     />
                 </div>
              </main>
