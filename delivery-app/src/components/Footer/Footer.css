@@ -1,0 +1,25 @@
+footer{
+    color: var(--dark-lazur);
+    font-size: var(--text-xsmall);
+    margin-top: .5rem;
+    padding: 0rem 1.5rem;
+}
+
+.footer-container{
+   text-align: center;
+}
+
+.footer-container > a, .footer-container > p {
+    color: var(--dark-lazur);
+    font-size: var(--text-xsmall);
+    text-decoration: underline;
+}
+
+.footer-container > p {
+    font-size: .9rem;
+}
+
+.footer-container > a:hover {
+    text-decoration: none;
+    color: var(--dark-lazur);
+}

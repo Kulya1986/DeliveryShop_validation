@@ -78,17 +78,7 @@ class ProdList extends Component{
         }
         
     }
-//Photo by <a href="https://unsplash.com/@briewilly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chad Montano</a> on <a href="https://unsplash.com/images/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-// Photo by <a href="https://unsplash.com/@roonz_nl?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">RoonZ nl</a> on <a href="https://unsplash.com/images/nature/flower?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-// Photo by <a href="https://unsplash.com/@anna2301?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Pavlin</a> on <a href="https://unsplash.com/images/nature/rose?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-//Photo by <a href="https://unsplash.com/@rebecca_lee_creative?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rebecca</a> on <a href="https://unsplash.com/s/photos/peony?license=free&utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@shouravsheikh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shourav Sheikh</a> on <a href="https://unsplash.com/images/food/pizza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@thisisnando?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fernando Andrade</a> on <a href="https://unsplash.com/images/food/pizza?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@epicantus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daria Nepriakhina 🇺🇦</a> on <a href="https://unsplash.com/images/things/book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brett Jordan</a> on <a href="https://unsplash.com/s/photos/nuggets?license=free&utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@jamesyarema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">James Yarema</a> on <a href="https://unsplash.com/s/photos/coke?license=free&utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
- //Photo by <a href="https://unsplash.com/@mitchel3uo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mitchell Luo</a> on <a href="https://unsplash.com/s/photos/fries?license=free&utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  //Photo by <a href="https://unsplash.com/@briewilly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chad Montano</a> on <a href="https://unsplash.com/images/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
+
 }
 
 

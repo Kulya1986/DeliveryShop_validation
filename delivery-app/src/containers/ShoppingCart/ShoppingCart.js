@@ -8,14 +8,18 @@ class ShoppingCart extends Component{
     constructor(props){
         super(props);
         this.state = {
-            validName:false,
-            validEmail: false,
-            validPhone:false,
-            validAddress: false,
-            validationMsgName:'',
-            validationMsgEmail:'',
-            validationMsgPhone:'',
-            validationMsgAddress:''
+            validField:{
+                validName:true,
+                validEmail: true,
+                validPhone:true,
+                validAddress: true
+            },
+            validationMsgs:{
+                validationMsgName:'',
+                validationMsgEmail:'',
+                validationMsgPhone:'',
+                validationMsgAddress:''
+            }    
         }
     }
 
@@ -56,27 +60,76 @@ class ShoppingCart extends Component{
 
     onOrderSubmitClick = () =>{
         this.validationCheck();
-        const st = this.state;
+        const st = this.state.validField;
         if (st.validName && st.validEmail && st.validPhone && st.validAddress)
         {
-            console.log("Form is valid");
             this.props.onOrderSubmit();
         }
     }
 
     validationCheck = () =>{
         const {customer_name, customer_email, customer_phone, customer_address} = this.props.customerInfo;
-        const phoneExp = /\(?\d{3}\)?\s?\d{3}-?\s?\d{2}-?\s?\d{2}/;
-        const emailExp =/^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        const phoneExp = /^\(?\d{3}\)?\s?\d{3}-?\s?\d{2}-?\s?\d{2}$/;
+        const emailExp = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
         const nameExp = /^[A-Za-z.\s]+$/;
         
-        console.log(customer_phone.search(phoneExp));
-        console.log(customer_email.search(emailExp));
-        console.log(customer_name.search(nameExp));
-        console.log('Name', customer_name);
-        console.log('Email', customer_email);
-        console.log('Phone', customer_phone);
-        console.log('Address', customer_address);
+        //Name field validation
+        if (customer_name.length>0) {
+            if (customer_name.search(nameExp) === 0){
+                this.setState(Object.assign(this.state.validField,{validName:true}));
+                this.setState(Object.assign(this.state.validationMsgs,{validationMsgName:''}));
+            }
+            else {
+                this.setState(Object.assign(this.state.validField,{validName:false}));
+                this.setState(Object.assign(this.state.validationMsgs,{validationMsgName:'Name field can include only latin upper/lowercase letters, \'.\' or space.'}));
+            }
+        }
+        else{
+            this.setState(Object.assign(this.state.validField,{validName:false}));
+            this.setState(Object.assign(this.state.validationMsgs,{validationMsgName:'Name field can\'t be empty'}));
+        }
+
+        //Address field validation
+        if (customer_address.length>0) {
+            this.setState(Object.assign(this.state.validField,{validAddress:true}));
+            this.setState(Object.assign(this.state.validationMsgs,{validationMsgAddress:''}));
+        }
+        else{
+            this.setState(Object.assign(this.state.validField,{validAddress:false}));
+            this.setState(Object.assign(this.state.validationMsgs,{validationMsgAddress:'Address field can\'t be empty'}));
+        }
+
+        //Phone field validation
+        if (customer_phone.length>0) {
+            if (customer_phone.search(phoneExp) === 0){
+                this.setState(Object.assign(this.state.validField,{validPhone:true}));
+                this.setState(Object.assign(this.state.validationMsgs,{validationMsgPhone:''}));
+            }
+            else {
+                this.setState(Object.assign(this.state.validField,{validPhone:false}));
+                this.setState(Object.assign(this.state.validationMsgs,{validationMsgPhone:'Allowed formats for phone: (xxx)xxx-xx-xx, (xxx)xxx xx xx, (xxx)xxxxxxx, xxxxxxxxxx'}));
+            }
+        }
+        else{
+            this.setState(Object.assign(this.state.validField,{validPhone:false}));
+            this.setState(Object.assign(this.state.validationMsgs,{validationMsgPhone:'Phone field can\'t be empty'}));
+        }
+
+        //Email field validation
+        if (customer_email.length>0) {
+            if (customer_email.search(emailExp) === 0){
+                this.setState(Object.assign(this.state.validField,{validEmail:true}));
+                this.setState(Object.assign(this.state.validationMsgs,{validationMsgEmail:''}));
+            }
+            else {
+                this.setState(Object.assign(this.state.validField,{validEmail:false}));
+                this.setState(Object.assign(this.state.validationMsgs,{validationMsgEmail:'Email should be in format \'name@example.com\''}));
+            }
+        }
+        else{
+            this.setState(Object.assign(this.state.validField,{validEmail:false}));
+            this.setState(Object.assign(this.state.validationMsgs,{validationMsgEmail:'Email field can\'t be empty'}));
+        }    
     }
   
     render(){
@@ -90,6 +143,8 @@ class ShoppingCart extends Component{
                         onNameChange={this.props.onNameChange}
                         orderSubmitted={this.props.orderSubmitted}
                         customerInfo={this.props.customerInfo}
+                        validationMsgs={this.state.validationMsgs}
+                        validField={this.state.validField}
                     />  
                     <BasketList 
                         shoppingCart={this.props.shoppingCart} 

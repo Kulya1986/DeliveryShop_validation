@@ -10,6 +10,7 @@
       --text-large: 1.6rem;
       --text-regular: 1.2rem;
       --text-small: 1rem;
+      --text-xsmall: .7rem;
       --light-yellow: #baccaa;
       --light-green: #a7c49f;
       --green: #419961;
@@ -25,9 +26,19 @@
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; 
-      height: 100vh;
+      height: 100%; 
       width: 100vw;
       min-width: 590px;
+  }
+
+  .body-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  footer {
+    margin-top: auto;
   }
 
 

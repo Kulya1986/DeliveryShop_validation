@@ -1,6 +1,6 @@
 .orders-list{
-    height: 54vh;
     width: 96%;
+    max-height: 41vh;
     border: 1px solid var( --dark-lazur);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

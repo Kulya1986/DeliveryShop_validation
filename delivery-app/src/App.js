@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import ShoppingCart from './containers/ShoppingCart/ShoppingCart';
 import Shop from './containers/Shop/Shop';
 import History from './containers/History/History';
+import Footer from './components/Footer/Footer';
 
 
 class App extends Component {
@@ -187,6 +188,7 @@ onAddToCart = (prod_id, prod_name, prod_price,prod_image, prod_quantity) => {
       <div className='body-container'>
           <Navigation onNavigationTabClick={this.onNavigationTabClick}/> 
           {mainContent}
+          <Footer/>
       </div>
       
     );

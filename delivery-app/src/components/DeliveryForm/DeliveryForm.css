@@ -11,7 +11,7 @@
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-items: center;
     align-items: center;
     margin: .5rem;
@@ -19,7 +19,7 @@
 
 .form-input{
     width: 100%;
-    margin: .5rem auto;
+    margin: 0rem auto;
 }
 
 .del-form-input{
@@ -34,6 +34,37 @@
     font-size: var(--text-regular);
     font-family: 'Sophista Belucy Regular', 'Helvetica Neue',
       sans-serif;
+}
+
+
+.form-input > div.input-false{
+    width: 100%;
+    visibility: visible;
+    font-family: 'Sophista Belucy Regular', 'Helvetica Neue',
+      sans-serif;
+    font-size: var(--text-xsmall);
+    color: rgb(246, 78, 78);
+    margin: .2rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .input-false > p{
+    padding: 0 5px;
+    margin: 0;
+  }
+  .input-false > img{
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin: .1rem;
+  }
+.form-input > div.input-true {
+    visibility: hidden;
+  }
+
+.form-input > input.false{
+    background-color: rgb(246, 164, 164);
 }
 
 @media only screen and (max-width: 768px) {
